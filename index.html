@@ -6,59 +6,61 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#1d4ed8">
-<title>TQIMS v46 — Quality Inspection Management System</title>
+<meta name="theme-color" content="#1e40af">
+<title>TQIMS v47 — Total Quality Inspection Management System</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap');
 
 :root{
-  /* ── TQIMS v42 — Futuristic Industrial Theme ── */
-  --bg:#EFF3FB;
-  --surf:#FFFFFF;
-  --surf2:#F6F9FF;
-  --surf3:#EBF0FF;
-  --border:#DDE5F5;
-  --border2:#B8CBF0;
+  /* ── TQIMS v47 — Dark Navy + Electric Blue Industrial Theme ── */
 
-  /* ── Primary ── */
-  --blue:#1346C4;
-  --blue2:#1D4ED8;
-  --blue-lt:#EEF3FF;
-  --blue-mid:#BFCFFE;
-  --blue-dk:#0B2A7A;
-  --blue-vivid:#2563EB;
+  /* ── Backgrounds ── */
+  --bg:#0B1120;
+  --surf:#111827;
+  --surf2:#1A2236;
+  --surf3:#1E2A40;
+  --border:#1F3059;
+  --border2:#2A4080;
+
+  /* ── Primary Blue ── */
+  --blue:#3B82F6;
+  --blue2:#60A5FA;
+  --blue-lt:rgba(59,130,246,.12);
+  --blue-mid:rgba(59,130,246,.30);
+  --blue-dk:#1D4ED8;
+  --blue-vivid:#93C5FD;
 
   /* ── Status ── */
-  --green:#047857;
-  --green-lt:#ECFDF5;
-  --amber:#B45309;
-  --amber-lt:#FFFBEB;
-  --red:#DC2626;
-  --red-lt:#FEF2F2;
-  --purple:#6D28D9;
-  --purple-lt:#F5F3FF;
-  --cyan:#0E7490;
-  --cyan-lt:#ECFEFF;
-  --sky:#0284C7;
-  --teal:#0F766E;
-  --teal-lt:#F0FDFA;
-  --orange:#C2410C;
-  --orange-lt:#FFF7ED;
+  --green:#10B981;
+  --green-lt:rgba(16,185,129,.12);
+  --amber:#F59E0B;
+  --amber-lt:rgba(245,158,11,.12);
+  --red:#EF4444;
+  --red-lt:rgba(239,68,68,.12);
+  --purple:#A78BFA;
+  --purple-lt:rgba(167,139,250,.12);
+  --cyan:#22D3EE;
+  --cyan-lt:rgba(34,211,238,.10);
+  --sky:#38BDF8;
+  --teal:#2DD4BF;
+  --teal-lt:rgba(45,212,191,.10);
+  --orange:#FB923C;
+  --orange-lt:rgba(251,146,60,.10);
 
-  /* ── Text ── */
-  --text:#09111F;
-  --text2:#1A2940;
-  --text3:#475569;
-  --text4:#7C8FAC;
-  --textinv:#FFFFFF;
+  /* ── Text — bright on dark ── */
+  --text:#F0F6FF;
+  --text2:#CBD5E1;
+  --text3:#64748B;
+  --text4:#334155;
+  --textinv:#0B1120;
 
-  /* ── Elevation ── */
-  --shadow-sm:0 1px 3px rgba(10,20,70,.06),0 1px 2px rgba(10,20,70,.04);
-  --shadow:0 4px 12px rgba(10,20,70,.08),0 2px 6px rgba(10,20,70,.05);
-  --shadow-lg:0 16px 48px rgba(10,20,70,.12),0 6px 16px rgba(10,20,70,.08);
-  --shadow-modal:0 24px 80px rgba(10,20,70,.22),0 8px 24px rgba(10,20,70,.14);
-  --glow:0 0 0 3px rgba(29,78,216,.18);
-  --glow-green:0 0 0 3px rgba(4,120,87,.18);
+  /* ── Shadows ── */
+  --shadow-sm:0 1px 4px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.4);
+  --shadow:0 4px 16px rgba(0,0,0,.6),0 2px 6px rgba(0,0,0,.4);
+  --shadow-lg:0 16px 48px rgba(0,0,0,.7),0 6px 20px rgba(0,0,0,.5);
+  --shadow-modal:0 24px 80px rgba(0,0,0,.8),0 8px 24px rgba(0,0,0,.6);
+  --glow:0 0 0 3px rgba(59,130,246,.30);
+  --glow-green:0 0 0 3px rgba(16,185,129,.30);
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -140,6 +142,7 @@ textarea{resize:vertical;min-height:64px;}
 .rp-welding_manager{color:#7c2d12;border-color:#fb923c;background:#fff7ed;}
 .rp-qc_manager{color:#312e81;border-color:#818cf8;background:#eef2ff;}
 .rp-qa{color:#064e3b;border-color:#34d399;background:#ecfdf5;}
+.rp-it_manager{color:#5b21b6;border-color:#8b5cf6;background:#ede9fe;}
 
 /* ── WELDING MODULE ── */
 .wld-status-active{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:#dcfce7;color:#166534;border:1.5px solid #4ade80;}
@@ -830,6 +833,638 @@ tr:hover td{background:var(--surf2);}
 .banner-warn{background:var(--amber-lt);border:1px solid #FCD34D;color:#92400E;}
 .banner-info{background:var(--blue-lt);border:1px solid var(--blue-mid);color:var(--blue-dk);}
 
+/* ════════════════════════════════════════════════════
+   TQIMS v47 — DARK NAVY ELECTRIC BLUE INDUSTRIAL THEME
+   High-contrast · Dynamic · Futuristic
+════════════════════════════════════════════════════ */
+
+/* ── Base body ── */
+html { background: var(--bg); }
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  position: relative;
+}
+
+/* ── Animated scanline grid ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(59,130,246,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridScroll 40s linear infinite;
+}
+@keyframes gridScroll { from{background-position:0 0} to{background-position:48px 48px} }
+
+/* ── Ambient glow orbs ── */
+body::after {
+  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 45% at 10% 10%, rgba(59,130,246,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90% 85%, rgba(34,211,238,.07) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 50% 50%, rgba(167,139,250,.05) 0%, transparent 55%);
+  animation: orbPulse 18s ease-in-out infinite alternate;
+}
+@keyframes orbPulse {
+  0%   { transform: scale(1)   translate(0, 0);      opacity: .7; }
+  50%  { transform: scale(1.04) translate(1.5%, 2%); opacity: 1;  }
+  100% { transform: scale(.97) translate(-1%, 1%);   opacity: .8; }
+}
+
+/* All content sits above pseudo-elements */
+.topbar, .app-body, #scr-auth, #scr-app, #supa-loading,
+.mbg, #toast, #toast-wrap { position: relative; z-index: 1; }
+
+/* ══════════════════════════════════════
+   TOPBAR
+══════════════════════════════════════ */
+.topbar {
+  background: rgba(11,17,32,.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 0 rgba(59,130,246,.15), 0 4px 24px rgba(0,0,0,.5) !important;
+  position: relative;
+}
+.topbar::after {
+  content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent 5%, #3b82f6 30%, #22d3ee 55%, #3b82f6 80%, transparent 95%);
+  animation: topBarFlow 5s ease-in-out infinite;
+}
+@keyframes topBarFlow { 0%,100%{opacity:.5} 50%{opacity:1} }
+
+/* Logo */
+.tb-logo {
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  font-size: 20px !important; font-weight: 700 !important; letter-spacing: 4px !important;
+  background: linear-gradient(135deg, #60a5fa, #22d3ee) !important;
+  -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+.tb-logo span { -webkit-text-fill-color: var(--text3) !important; font-size: 11px !important; }
+
+/* Role pill — dark theme */
+.rpill {
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  font-weight: 700 !important; letter-spacing: 1.5px !important;
+}
+.rp-admin         { color:#fbbf24; border-color:rgba(251,191,36,.35); background:rgba(251,191,36,.1); }
+.rp-production    { color:#60a5fa; border-color:rgba(96,165,250,.35); background:rgba(96,165,250,.1); }
+.rp-quality       { color:#34d399; border-color:rgba(52,211,153,.35); background:rgba(52,211,153,.1); }
+.rp-manager       { color:#c084fc; border-color:rgba(192,132,252,.35); background:rgba(192,132,252,.1); }
+.rp-qa            { color:#6ee7b7; border-color:rgba(110,231,183,.35); background:rgba(110,231,183,.1); }
+.rp-qc_manager    { color:#a5b4fc; border-color:rgba(165,180,252,.35); background:rgba(165,180,252,.1); }
+.rp-welding_engineer{color:#fb923c;border-color:rgba(251,146,60,.35); background:rgba(251,146,60,.1); }
+.rp-welding_dept  { color:#4ade80; border-color:rgba(74,222,128,.35); background:rgba(74,222,128,.1); }
+.rp-welding_manager{color:#fcd34d;border-color:rgba(252,211,77,.35);  background:rgba(252,211,77,.1); }
+.rp-it_manager    { color:#e879f9; border-color:rgba(232,121,249,.35); background:rgba(232,121,249,.1); }
+
+.tb-user { color: var(--text2) !important; font-size: 12px; }
+.tb-logout {
+  background: rgba(239,68,68,.1) !important;
+  border: 1px solid rgba(239,68,68,.3) !important;
+  color: #fca5a5 !important;
+}
+.tb-logout:hover { background: rgba(239,68,68,.2) !important; color: #fff !important; }
+
+/* ══════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════ */
+.sidebar {
+  background: linear-gradient(180deg, #0d1422 0%, #0b1120 100%) !important;
+  border-right: 1px solid var(--border) !important;
+  box-shadow: 4px 0 24px rgba(0,0,0,.6) !important;
+}
+.sg-lbl {
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  font-size: 9px !important; letter-spacing: 2.5px !important;
+  color: rgba(59,130,246,.5) !important;
+  border-bottom: 1px solid rgba(59,130,246,.1);
+  padding-bottom: 5px !important;
+}
+.nitem {
+  color: rgba(203,213,225,.6) !important;
+  transition: all .18s cubic-bezier(.4,0,.2,1) !important;
+}
+.nitem:hover {
+  background: rgba(59,130,246,.1) !important;
+  color: #93c5fd !important;
+  transform: translateX(3px) !important;
+}
+.nitem.on {
+  background: linear-gradient(90deg, rgba(59,130,246,.2), rgba(59,130,246,.06)) !important;
+  color: #60a5fa !important;
+  border-left: 3px solid #3b82f6 !important;
+  font-weight: 600 !important;
+  box-shadow: inset 0 0 20px rgba(59,130,246,.08), 0 0 0 1px rgba(59,130,246,.15) !important;
+}
+.nitem.on .ni { filter: drop-shadow(0 0 6px rgba(59,130,246,.6)) !important; }
+.nbadge {
+  background: var(--amber) !important;
+  color: #000 !important;
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%,100%{ box-shadow: 0 0 0 0 rgba(245,158,11,.5); }
+  60%    { box-shadow: 0 0 0 5px rgba(245,158,11,0); }
+}
+
+/* ══════════════════════════════════════
+   AUTH SCREEN
+══════════════════════════════════════ */
+#scr-auth {
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 10%, rgba(59,130,246,.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 90%, rgba(34,211,238,.12) 0%, transparent 50%),
+    linear-gradient(165deg, #070e1c 0%, #0b1528 50%, #0a1320 100%) !important;
+  position: relative;
+}
+#scr-auth::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(59,130,246,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridScroll 40s linear infinite;
+  z-index: 0;
+}
+.acard {
+  background: rgba(17,24,39,.95) !important;
+  border: 1px solid rgba(59,130,246,.2) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 24px 64px rgba(0,0,0,.7),
+    0 0 0 1px rgba(59,130,246,.15),
+    inset 0 1px 0 rgba(255,255,255,.05) !important;
+  backdrop-filter: blur(16px) !important;
+  animation: cardRise .5s cubic-bezier(.175,.885,.32,1.1) both;
+  position: relative; z-index: 1;
+}
+@keyframes cardRise {
+  from { opacity:0; transform: translateY(32px) scale(.95); }
+  to   { opacity:1; transform: translateY(0)    scale(1);   }
+}
+.acard::before {
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #3b82f6 25%, #22d3ee 55%, #3b82f6 82%, transparent) !important;
+  animation: topLineGlow 3s ease-in-out infinite;
+}
+@keyframes topLineGlow {
+  0%,100%{ opacity:.6; } 50%{ opacity:1; box-shadow:0 0 12px rgba(34,211,238,.5); }
+}
+.logo-big {
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  font-size: 46px !important; font-weight: 700 !important; letter-spacing: 8px !important;
+  background: linear-gradient(135deg, #60a5fa, #22d3ee) !important;
+  -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: logoPulse 3s ease-in-out infinite;
+}
+@keyframes logoPulse {
+  0%,100%{ filter: drop-shadow(0 0 0px rgba(96,165,250,0));   }
+  50%    { filter: drop-shadow(0 0 16px rgba(96,165,250,.35)); }
+}
+.logo-sub { color: rgba(96,165,250,.5) !important; letter-spacing: 2px !important; }
+.auth-title, .auth-subtitle { color: var(--text2) !important; }
+.atabs { background: rgba(255,255,255,.04) !important; border: 1px solid var(--border) !important; }
+.atab { color: var(--text3) !important; }
+.atab.on { background: rgba(59,130,246,.15) !important; color: #60a5fa !important; box-shadow: 0 0 12px rgba(59,130,246,.2) !important; }
+.alink a { color: #60a5fa !important; }
+.alink a:hover { color: #22d3ee !important; }
+.credit { color: rgba(96,165,250,.3) !important; }
+
+/* ══════════════════════════════════════
+   INPUTS & FORMS
+══════════════════════════════════════ */
+input, select, textarea {
+  background: rgba(255,255,255,.05) !important;
+  border: 1px solid rgba(59,130,246,.2) !important;
+  color: var(--text) !important;
+  transition: all .2s !important;
+}
+input:focus, select:focus, textarea:focus {
+  background: rgba(59,130,246,.08) !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.2), 0 0 16px rgba(59,130,246,.1) !important;
+  outline: none !important;
+}
+input::placeholder, textarea::placeholder { color: var(--text4) !important; }
+select option { background: #1a2236 !important; color: var(--text) !important; }
+.lbl { color: var(--text2) !important; }
+
+/* ══════════════════════════════════════
+   CARDS
+══════════════════════════════════════ */
+.card {
+  background: var(--surf) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  transition: border-color .2s, box-shadow .2s, transform .2s !important;
+}
+.card:hover {
+  border-color: rgba(59,130,246,.3) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,.4), 0 0 0 1px rgba(59,130,246,.1) !important;
+}
+.chead .ctitle {
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  letter-spacing: 1.5px !important;
+  color: rgba(96,165,250,.8) !important;
+}
+
+/* ══════════════════════════════════════
+   STAT BOXES (KPIs)
+══════════════════════════════════════ */
+.sbox {
+  background: var(--surf) !important;
+  border: 1px solid var(--border) !important;
+  transition: all .22s !important;
+}
+.sbox:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(59,130,246,.4) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,.5), 0 0 20px rgba(59,130,246,.12) !important;
+}
+.snum { color: var(--text) !important; }
+.slbl { color: var(--text3) !important; }
+.sb-blue::before  { background: linear-gradient(180deg,#3b82f6,#22d3ee) !important; }
+.sb-green::before { background: linear-gradient(180deg,#10b981,#2dd4bf) !important; }
+.sb-amber::before { background: linear-gradient(180deg,#f59e0b,#fb923c) !important; }
+.sb-red::before   { background: linear-gradient(180deg,#ef4444,#f97316) !important; }
+.pfill { background: linear-gradient(90deg,#3b82f6,#22d3ee) !important; }
+.pbar  { background: rgba(255,255,255,.08) !important; }
+
+/* ══════════════════════════════════════
+   BUTTONS
+══════════════════════════════════════ */
+.btn {
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  font-weight: 700 !important; letter-spacing: .5px !important;
+  transition: all .2s !important;
+}
+.btn-blue {
+  background: linear-gradient(135deg,#1d4ed8,#3b82f6) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(59,130,246,.4), 0 0 0 1px rgba(59,130,246,.2) !important;
+}
+.btn-blue:hover {
+  background: linear-gradient(135deg,#2563eb,#60a5fa) !important;
+  box-shadow: 0 8px 28px rgba(59,130,246,.55), 0 0 20px rgba(59,130,246,.2) !important;
+  transform: translateY(-2px) !important;
+}
+.btn-green {
+  background: linear-gradient(135deg,#047857,#10b981) !important;
+  color: #fff !important; box-shadow: 0 4px 14px rgba(16,185,129,.35) !important;
+}
+.btn-green:hover { transform: translateY(-2px) !important; box-shadow: 0 8px 24px rgba(16,185,129,.45) !important; }
+.btn-amber {
+  background: linear-gradient(135deg,#b45309,#f59e0b) !important;
+  color: #fff !important; box-shadow: 0 4px 14px rgba(245,158,11,.35) !important;
+}
+.btn-amber:hover { transform: translateY(-2px) !important; }
+.btn-red {
+  background: linear-gradient(135deg,#991b1b,#ef4444) !important;
+  color: #fff !important; box-shadow: 0 4px 14px rgba(239,68,68,.35) !important;
+}
+.btn-ghost {
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid var(--border2) !important;
+  color: var(--text2) !important;
+}
+.btn-ghost:hover {
+  background: rgba(59,130,246,.1) !important;
+  border-color: rgba(59,130,246,.4) !important;
+  color: #60a5fa !important;
+}
+
+/* ── Action buttons ── */
+.abtn { color: var(--text2) !important; border-color: var(--border2) !important; transition: all .15s !important; }
+.ab-blue   { color:#60a5fa !important;  border-color:rgba(59,130,246,.4) !important; }
+.ab-blue:hover   { background:rgba(59,130,246,.15) !important; }
+.ab-green  { color:#34d399 !important;  border-color:rgba(52,211,153,.4) !important; }
+.ab-green:hover  { background:rgba(52,211,153,.12) !important; }
+.ab-red    { color:#fca5a5 !important;  border-color:rgba(239,68,68,.4) !important; }
+.ab-red:hover    { background:rgba(239,68,68,.12) !important; }
+.ab-amber  { color:#fcd34d !important;  border-color:rgba(245,158,11,.4) !important; }
+.ab-amber:hover  { background:rgba(245,158,11,.12) !important; }
+.ab-ghost  { color:var(--text3) !important; border-color:var(--border) !important; }
+.ab-ghost:hover  { color:var(--text2) !important; background:rgba(255,255,255,.05) !important; }
+
+/* ══════════════════════════════════════
+   TABLE
+══════════════════════════════════════ */
+th {
+  background: rgba(59,130,246,.07) !important;
+  color: rgba(96,165,250,.8) !important;
+  border-bottom: 1px solid var(--border2) !important;
+  font-family: 'Rajdhani', 'Inter', sans-serif !important;
+  letter-spacing: 1px !important;
+}
+td { border-bottom: 1px solid rgba(255,255,255,.04) !important; color: var(--text) !important; }
+tr:hover td { background: rgba(59,130,246,.05) !important; }
+
+/* ══════════════════════════════════════
+   STATUS CHIPS
+══════════════════════════════════════ */
+.chip { font-family: 'Rajdhani','Inter',sans-serif !important; font-weight:700 !important; letter-spacing:.5px !important; }
+.ch-pend { color:var(--text3)  !important; border-color:var(--border2) !important; background:rgba(255,255,255,.04) !important; }
+.ch-off  { color:#fcd34d !important;  border-color:rgba(245,158,11,.4) !important;  background:rgba(245,158,11,.1) !important; }
+.ch-acc  { color:#34d399 !important;  border-color:rgba(52,211,153,.4) !important;  background:rgba(52,211,153,.1) !important; }
+.ch-rej  { color:#fca5a5 !important;  border-color:rgba(239,68,68,.4) !important;   background:rgba(239,68,68,.1) !important; }
+.ch-ret  { color:#7dd3fc !important;  border-color:rgba(56,189,248,.4) !important;  background:rgba(56,189,248,.1) !important; }
+.ch-ncr  { color:#c4b5fd !important;  border-color:rgba(167,139,250,.4) !important; background:rgba(167,139,250,.1) !important; }
+.ch-lock { color:var(--text4) !important; border-color:var(--border) !important; background:rgba(255,255,255,.03) !important; }
+
+/* Filter chips */
+.fchip { background:rgba(255,255,255,.05) !important; border-color:var(--border2) !important; color:var(--text3) !important; transition:all .15s !important; }
+.fchip:hover { border-color:rgba(59,130,246,.4) !important; color:#60a5fa !important; background:rgba(59,130,246,.1) !important; }
+.fchip.on { background:rgba(59,130,246,.15) !important; border-color:rgba(59,130,246,.5) !important; color:#60a5fa !important; box-shadow:0 0 10px rgba(59,130,246,.15) !important; }
+
+/* ══════════════════════════════════════
+   MODAL
+══════════════════════════════════════ */
+.mbg { background: rgba(0,0,0,.75) !important; backdrop-filter: blur(6px) !important; }
+.modal {
+  background: #111827 !important;
+  border: 1px solid rgba(59,130,246,.2) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,.8), 0 0 0 1px rgba(59,130,246,.1) !important;
+}
+.modal::before {
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #3b82f6 30%, #22d3ee 60%, #3b82f6 85%, transparent) !important;
+}
+.mhead { border-bottom: 1px solid var(--border) !important; }
+.mtitle { color: var(--text) !important; font-family:'Rajdhani','Inter',sans-serif !important; font-weight:700 !important; letter-spacing:.5px !important; }
+.mfoot { background: rgba(255,255,255,.03) !important; border-top: 1px solid var(--border) !important; }
+.mclose { color:var(--text3) !important; }
+.mclose:hover { background:rgba(239,68,68,.15) !important; color:#fca5a5 !important; }
+
+/* ══════════════════════════════════════
+   NAV TILES & CARDS
+══════════════════════════════════════ */
+.seam-tile, .tag-card, .proj-card, .comp-card {
+  background: var(--surf) !important;
+  border-color: var(--border) !important;
+  transition: all .22s cubic-bezier(.4,0,.2,1) !important;
+}
+.seam-tile:hover, .tag-card:hover, .proj-card:hover, .comp-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(59,130,246,.5) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,.5), 0 0 0 1px rgba(59,130,246,.15), 0 0 24px rgba(59,130,246,.08) !important;
+}
+.seam-tile.st-done     { border-left: 3px solid var(--green)  !important; }
+.seam-tile.st-active   { border-left: 3px solid var(--amber)  !important; }
+.seam-tile.st-rejected { border-left: 3px solid var(--red)    !important; }
+.seam-tile.st-pending  { border-left: 3px solid var(--border2) !important; }
+.st-seam-num { color: #60a5fa !important; }
+.tag-num     { color: #60a5fa !important; }
+
+/* ══════════════════════════════════════
+   DASHBOARD & PAGES
+══════════════════════════════════════ */
+.pgt { font-family:'Rajdhani','Inter',sans-serif !important; font-weight:700 !important; letter-spacing:.5px !important; color:var(--text) !important; }
+.pgs { color: var(--text3) !important; }
+.pgh { border-bottom: 1px solid var(--border) !important; }
+.pg.on { animation: pgIn .22s ease both; }
+@keyframes pgIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+/* Breadcrumb */
+.breadcrumb { background: rgba(59,130,246,.06) !important; border: 1px solid var(--border) !important; }
+.bc-item { color: var(--text3) !important; }
+.bc-item:hover { color: #60a5fa !important; }
+.bc-item.active { color: var(--text) !important; }
+.bc-home { color: #60a5fa !important; }
+.bc-sep { color: var(--border2) !important; }
+
+/* Section tabs */
+.stabs { border-bottom: 1px solid var(--border) !important; }
+.stab { color: var(--text3) !important; transition: all .15s !important; }
+.stab:hover { color: #60a5fa !important; }
+.stab.on { color: #60a5fa !important; border-bottom-color: #3b82f6 !important; font-family:'Rajdhani','Inter',sans-serif !important; font-weight:700 !important; }
+
+/* Back button */
+.back-btn { background: rgba(255,255,255,.05) !important; border-color: var(--border) !important; color: var(--text3) !important; }
+.back-btn:hover { border-color: rgba(59,130,246,.4) !important; color: #60a5fa !important; background: rgba(59,130,246,.08) !important; }
+
+/* Stage rows */
+.stage-row { border-bottom: 1px solid var(--border) !important; }
+.stage-row:hover { background: rgba(59,130,246,.04) !important; }
+.sr-name { color: var(--text) !important; }
+.sr-detail { color: var(--text3) !important; }
+.sr-num { color: var(--text4) !important; }
+.sd-num { color: #60a5fa !important; }
+.sd-desc { color: var(--text2) !important; }
+.seam-detail-card { background: var(--surf) !important; border-color: var(--border) !important; transition: box-shadow .2s !important; }
+.seam-detail-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.4), 0 0 0 1px rgba(59,130,246,.15) !important; }
+.sdh { background: var(--surf2) !important; }
+.sdh:hover { background: var(--surf3) !important; }
+
+/* ══════════════════════════════════════
+   MISC COMPONENTS
+══════════════════════════════════════ */
+/* Toast */
+.toast {
+  background: linear-gradient(135deg,#1d4ed8,#1e40af) !important;
+  color: #fff !important;
+  border-left: 4px solid #60a5fa !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(29,78,216,.5) !important;
+  font-weight: 600 !important;
+}
+
+/* Log rows */
+.log-row { border-bottom: 1px solid var(--border) !important; }
+.log-time { color: var(--text4) !important; }
+.log-msg  { color: var(--text2) !important; }
+
+/* NCR dot */
+.ncr-dot {
+  background: var(--red) !important;
+  box-shadow: 0 0 0 3px rgba(239,68,68,.2) !important;
+  animation: ncrBlink 1.8s ease-in-out infinite;
+}
+@keyframes ncrBlink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* ITP step bar */
+.mir-step.on,.mir-step.active { background:var(--blue2) !important; color:#fff !important; box-shadow:0 2px 12px rgba(59,130,246,.4) !important; }
+.mir-step.done { background:rgba(16,185,129,.15) !important; color:var(--green) !important; }
+
+/* Stage template cards */
+.tmpl-card { background: var(--surf2) !important; border-color: var(--border) !important; }
+.tmpl-card:hover, .tmpl-card.sel { border-color: rgba(59,130,246,.5) !important; background: rgba(59,130,246,.08) !important; }
+
+/* Messages */
+.msg-err  { color:#fca5a5 !important; border-color:rgba(239,68,68,.4) !important;   background:rgba(239,68,68,.08) !important; }
+.msg-ok   { color:#6ee7b7 !important; border-color:rgba(16,185,129,.4) !important;  background:rgba(16,185,129,.08) !important; }
+.msg-warn { color:#fcd34d !important; border-color:rgba(245,158,11,.4) !important;  background:rgba(245,158,11,.08) !important; }
+
+/* Banners */
+.banner-ok   { background:rgba(16,185,129,.1) !important;  border-color:rgba(16,185,129,.3) !important;  color:#6ee7b7 !important; }
+.banner-err  { background:rgba(239,68,68,.1) !important;   border-color:rgba(239,68,68,.3) !important;   color:#fca5a5 !important; }
+.banner-warn { background:rgba(245,158,11,.1) !important;  border-color:rgba(245,158,11,.3) !important;  color:#fcd34d !important; }
+.banner-info { background:rgba(59,130,246,.1) !important;  border-color:rgba(59,130,246,.3) !important;  color:#93c5fd !important; }
+
+/* Project / Tag flow tree */
+.flow-proj { border-color: var(--border) !important; }
+.flow-proj-head { background: rgba(59,130,246,.06) !important; }
+.flow-cat { background: var(--surf2) !important; border-color: var(--border) !important; }
+.flow-cat-head { color: #60a5fa !important; }
+.flow-seam { background: var(--surf2) !important; border-color: var(--border) !important; }
+.flow-seam:hover { border-color: rgba(59,130,246,.4) !important; background: rgba(59,130,246,.1) !important; }
+
+/* Progress bar (green fill for project progress) */
+.projbar { background: var(--surf) !important; border-color: var(--border) !important; }
+.pf-val  { color: #60a5fa !important; }
+.pf-lbl  { color: var(--text4) !important; }
+
+/* KPI cyan/blue colour indicators */
+.kpi-cyan { color: #22d3ee !important; }
+.kpi-blue { color: #60a5fa !important; }
+
+/* Storage warning — dark adapted */
+#storage-warning {
+  background: rgba(245,158,11,.08) !important;
+  border: 1px solid rgba(245,158,11,.25) !important;
+  border-left: 3px solid var(--amber) !important;
+  border-radius: 10px !important;
+}
+
+/* Supa loading overlay — dark */
+#supa-loading {
+  background: linear-gradient(135deg,#070e1c 0%,#0b1528 100%) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(59,130,246,.25); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(59,130,246,.5); }
+
+/* Print — always white */
+@media print {
+  body, .main { background: #fff !important; color: #000 !important; }
+  .topbar, .sidebar { display: none !important; }
+}
+
+/* ══════════════════════════════════════════════════
+   SIDEBAR — Role-Grouped Collapsible Sections
+══════════════════════════════════════════════════ */
+
+/* User identity card */
+.sb-user-card {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid rgba(59,130,246,.12);
+  margin-bottom: 4px;
+}
+.sb-user-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg,#1d4ed8,#22d3ee);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Rajdhani','Inter',sans-serif;
+  font-size: 16px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(59,130,246,.4);
+}
+.sb-user-info { min-width: 0; }
+.sb-user-name {
+  font-size: 13px; font-weight: 600; color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sb-user-role {
+  font-family: 'Rajdhani','Inter',sans-serif;
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: #60a5fa; margin-top: 1px;
+}
+
+/* Group container */
+.sb-group { margin: 0 0 2px; }
+
+/* Group header — clickable section toggle */
+.sb-group-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px 8px 10px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background .15s;
+  user-select: none;
+  border-left: 3px solid transparent;
+}
+.sb-group-header:hover { background: rgba(59,130,246,.06); }
+.sb-group-header.open {
+  border-left-color: rgba(59,130,246,.3);
+  background: rgba(59,130,246,.04);
+}
+
+.sbg-icon {
+  font-size: 13px; width: 18px; text-align: center; flex-shrink: 0;
+  opacity: .7;
+}
+.sbg-label {
+  flex: 1;
+  font-family: 'Rajdhani','Inter',sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(96,165,250,.6);
+  transition: color .15s;
+}
+.sb-group-header:hover .sbg-label,
+.sb-group-header.open .sbg-label { color: rgba(96,165,250,.9); }
+
+.sbg-arrow {
+  font-size: 10px; color: rgba(96,165,250,.4);
+  transition: transform .2s, color .15s;
+  flex-shrink: 0;
+}
+.sb-group-header.open .sbg-arrow { transform: rotate(0deg); color: rgba(96,165,250,.7); }
+.sb-group-header:not(.open) .sbg-arrow { transform: rotate(-90deg); }
+
+/* Group body — collapsible */
+.sb-group-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .28s cubic-bezier(.4,0,.2,1);
+  padding-left: 4px;
+}
+.sb-group-body.open { max-height: 600px; }
+
+/* Divider between sections */
+.sb-group + .sb-group { border-top: 1px solid rgba(59,130,246,.06); }
+
+/* Role-colour accent per group */
+#sbg-production .sb-group-header.open { border-left-color: rgba(96,165,250,.5); }
+#sbg-production .sbg-label { color: rgba(96,165,250,.7); }
+#sbg-material   .sb-group-header.open { border-left-color: rgba(16,185,129,.4); }
+#sbg-material   .sbg-label { color: rgba(52,211,153,.7); }
+#sbg-qc         .sb-group-header.open { border-left-color: rgba(52,211,153,.5); }
+#sbg-qc         .sbg-label { color: rgba(110,231,183,.7); }
+#sbg-welding    .sb-group-header.open { border-left-color: rgba(251,146,60,.4); }
+#sbg-welding    .sbg-label { color: rgba(251,146,60,.7); }
+#sbg-manager    .sb-group-header.open { border-left-color: rgba(192,132,252,.4); }
+#sbg-manager    .sbg-label { color: rgba(192,132,252,.7); }
+#sbg-admin      .sb-group-header.open { border-left-color: rgba(251,191,36,.4); }
+#sbg-admin      .sbg-label { color: rgba(251,191,36,.7); }
+#sbg-reports    .sb-group-header.open { border-left-color: rgba(34,211,238,.3); }
+#sbg-reports    .sbg-label { color: rgba(34,211,238,.6); }
+
+/* Sidebar credit */
+.sb-credit {
+  font-family: 'JetBrains Mono',monospace;
+  font-size: 8px; color: rgba(59,130,246,.25);
+  text-align: center; padding: 16px 12px 12px;
+  letter-spacing: 1px; border-top: 1px solid rgba(59,130,246,.06);
+  margin-top: 8px;
+}
+
+/* Nitem inside groups — indent slightly */
+.sb-group-body .nitem {
+  margin: 0 4px 1px;
+  border-radius: 8px !important;
+}
+
 </style>
 </head>
 <body>
@@ -849,7 +1484,7 @@ tr:hover td{background:var(--surf2);}
 
     <!-- LOGIN -->
     <div class="aform on" id="form-login">
-      <div><label class="lbl">Mobile Number <span style="color:var(--text3);font-weight:400;">or Corporate Email</span></label><input id="l-mob" type="text" placeholder="9876543210  or  you@company.com" autocomplete="username"></div>
+      <div><label class="lbl">Mobile Number <span style="color:var(--text3);font-weight:400;">or Email</span></label><input id="l-mob" type="text" placeholder="Mobile number or email" autocomplete="username"></div>
       <div><label class="lbl">Password</label><input id="l-pw" type="password" placeholder="Your password" autocomplete="current-password"></div>
       <div id="l-err"></div>
       <button class="btn btn-blue btn-w" onclick="doLogin()">LOGIN →</button>
@@ -933,55 +1568,138 @@ tr:hover td{background:var(--surf2);}
   <div class="app-body">
     <div class="sov" id="sov" onclick="closeSidebar()"></div>
 
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR — Role-grouped collapsible sections -->
     <div class="sidebar" id="sidebar">
-      <div>
-        <div class="sg-lbl">Main</div>
-        <div class="nitem on" id="ni-dashboard" onclick="goPage('dashboard')"><span class="ni">🏠</span>Dashboard</div>
-        <div class="nitem" id="ni-mir" onclick="goPage('mir')"><span class="ni">📦</span>Material Clearance<span class="nbadge" id="nb-mir" style="display:none">0</span></div>
-        <div class="nitem" id="ni-inspection" onclick="goPage('inspection')"><span class="ni">🔬</span>Inspection<span class="nbadge" id="nb" style="display:none">0</span></div>
-        <div class="nitem" id="ni-log" onclick="goPage('log')"><span class="ni">📋</span>Activity Log</div>
+
+      <!-- ── USER IDENTITY CARD ── -->
+      <div class="sb-user-card" id="sb-user-card">
+        <div class="sb-user-avatar" id="sb-user-avatar">A</div>
+        <div class="sb-user-info">
+          <div class="sb-user-name" id="sb-user-name">—</div>
+          <div class="sb-user-role" id="sb-user-role">—</div>
+        </div>
       </div>
-      <div id="admin-nav" style="display:none">
-        <div class="sg-lbl">Admin Tools</div>
-        <div class="nitem" id="ni-projects" onclick="goPage('projects')"><span class="ni">📁</span>Project Structure</div>
-        <div class="nitem" id="ni-stages" onclick="goPage('stages')"><span class="ni">⚙️</span>Stage Templates</div>
-        <div class="nitem" id="ni-users" onclick="goPage('users')"><span class="ni">👥</span>Users</div>
-        <div class="nitem" id="ni-backup" onclick="goPage('backup')"><span class="ni">💾</span>Backup & Restore</div>
+
+      <!-- ════ SECTION: OVERVIEW (all roles) ════ -->
+      <div class="sb-group" id="sbg-main">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-main')">
+          <span class="sbg-icon">⬡</span>
+          <span class="sbg-label">Overview</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem on" id="ni-dashboard" onclick="goPage('dashboard')"><span class="ni">🏠</span>Dashboard</div>
+          <div class="nitem" id="ni-log" onclick="goPage('log')"><span class="ni">📋</span>Activity Log</div>
+          <div class="nitem" id="ni-profile" onclick="goPage('profile')"><span class="ni">👤</span>My Profile</div>
+          <div class="nitem" id="ni-faq" onclick="goPage('faq')"><span class="ni">❓</span>Help &amp; FAQ</div>
+        </div>
       </div>
-      <div id="manager-nav" style="display:none">
-        <div class="sg-lbl">Manager</div>
-        <div class="nitem" id="ni-approvals" onclick="goPage('approvals')"><span class="ni">✅</span>Approvals<span class="nbadge" id="nb-approvals" style="display:none">0</span></div>
+
+      <!-- ════ SECTION: PRODUCTION (production role) ════ -->
+      <div class="sb-group" id="sbg-production" style="display:none">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-production')">
+          <span class="sbg-icon">🏗️</span>
+          <span class="sbg-label">Production</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem" id="ni-inspection-prod" onclick="goPage('inspection')"><span class="ni">📤</span>Offer Stages<span class="nbadge" id="nb-prod" style="display:none">0</span></div>
+          <div class="nitem" id="ni-mir-prod" onclick="goPage('mir')"><span class="ni">📦</span>Material Request</div>
+        </div>
       </div>
-      <div id="qcmgr-nav" style="display:none">
-        <div class="sg-lbl">QC Management</div>
-        <div class="nitem" id="ni-qcmgr-approvals" onclick="goPage('qcmgr-approvals')"><span class="ni">🔬</span>QC Approvals<span class="nbadge" id="nb-qcmgr" style="display:none">0</span></div>
+
+      <!-- ════ SECTION: MATERIAL QC ════ -->
+      <div class="sb-group" id="sbg-material" style="display:none">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-material')">
+          <span class="sbg-icon">📦</span>
+          <span class="sbg-label">Material QC</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem" id="ni-mir" onclick="goPage('mir')"><span class="ni">📦</span>Material Clearance<span class="nbadge" id="nb-mir" style="display:none">0</span></div>
+        </div>
       </div>
-      <div id="weldmgr-nav" style="display:none">
-        <div class="sg-lbl">Welding Management</div>
-        <div class="nitem" id="ni-weldmgr-approvals" onclick="goPage('weldmgr-approvals')"><span class="ni">🏭</span>Weld Approvals<span class="nbadge" id="nb-weldmgr" style="display:none">0</span></div>
+
+      <!-- ════ SECTION: STAGE INSPECTION QC ════ -->
+      <div class="sb-group" id="sbg-qc" style="display:none">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-qc')">
+          <span class="sbg-icon">🔬</span>
+          <span class="sbg-label">Stage Inspection</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem" id="ni-inspection" onclick="goPage('inspection')"><span class="ni">🔬</span>Inspection Stages<span class="nbadge" id="nb" style="display:none">0</span></div>
+          <div class="nitem" id="ni-itp-assign" onclick="goPage('itp-assign')"><span class="ni">📋</span>ITP Assignment</div>
+          <div class="nitem" id="ni-qcmgr-approvals" onclick="goPage('qcmgr-approvals')"><span class="ni">✅</span>QC Approvals<span class="nbadge" id="nb-qcmgr" style="display:none">0</span></div>
+          <div class="nitem" id="ni-release" onclick="goPage('release')"><span class="ni">🔓</span>Release Control<span class="nbadge" id="nb-release" style="display:none">!</span></div>
+        </div>
       </div>
-      <div id="qa-nav" style="display:none">
-        <div class="sg-lbl">QA / QC</div>
-        <div class="nitem" id="ni-itp-assign" onclick="goPage('itp-assign')"><span class="ni">📋</span>ITP Assignment</div>
+
+      <!-- ════ SECTION: WELDING DEPT ════ -->
+      <div class="sb-group" id="sbg-welding" style="display:none">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-welding')">
+          <span class="sbg-icon">🏭</span>
+          <span class="sbg-label">Welding</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem" id="ni-weld-dashboard" onclick="goPage('weld-dashboard')"><span class="ni">📊</span>Welding Dashboard</div>
+          <div class="nitem" id="ni-weld-book" onclick="goPage('weld-book')"><span class="ni">📗</span>Weld Book</div>
+          <div class="nitem" id="ni-wps-library" onclick="goPage('wps-library')"><span class="ni">📘</span>WPS Library</div>
+          <div class="nitem" id="ni-welder-master" onclick="goPage('welder-master')"><span class="ni">👷</span>Welder Master</div>
+          <div class="nitem" id="ni-weldmgr-approvals" onclick="goPage('weldmgr-approvals')"><span class="ni">✅</span>Weld Approvals<span class="nbadge" id="nb-weldmgr" style="display:none">0</span></div>
+        </div>
       </div>
-      <div id="welding-nav" style="display:none">
-        <div class="sg-lbl">Welding</div>
-        <div class="nitem" id="ni-weld-dashboard" onclick="goPage('weld-dashboard')"><span class="ni">🏭</span>Welding Dashboard</div>
-        <div class="nitem" id="ni-welder-master" onclick="goPage('welder-master')"><span class="ni">👷</span>Welder Master List</div>
-        <div class="nitem" id="ni-wps-library" onclick="goPage('wps-library')"><span class="ni">📘</span>WPS Library</div>
-        <div class="nitem" id="ni-weld-book" onclick="goPage('weld-book')"><span class="ni">📗</span>Weld Book</div>
+
+      <!-- ════ SECTION: MANAGER ════ -->
+      <div class="sb-group" id="sbg-manager" style="display:none">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-manager')">
+          <span class="sbg-icon">📊</span>
+          <span class="sbg-label">Management</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem" id="ni-approvals" onclick="goPage('approvals')"><span class="ni">✅</span>Approvals<span class="nbadge" id="nb-approvals" style="display:none">0</span></div>
+          <div class="nitem" id="ni-compare" onclick="goPage('compare')"><span class="ni">📊</span>Compare &amp; Charts</div>
+          <div class="nitem" id="ni-summary" onclick="goPage('summary')"><span class="ni">📄</span>Print Summary</div>
+        </div>
       </div>
-      <div>
-        <div class="sg-lbl">Reports</div>
-        <div class="nitem" id="ni-release" onclick="goPage('release')"><span class="ni">🔓</span>Release Control<span class="nbadge" id="nb-release" style="display:none">!</span></div>
-        <div class="nitem" id="ni-summary" onclick="goPage('summary')"><span class="ni">📄</span>Print Summary</div>
-        <div class="nitem" id="ni-compare" onclick="goPage('compare')"><span class="ni">📊</span>Compare & Charts</div>
-        <div class="sg-lbl">Account</div>
-        <div class="nitem" id="ni-profile" onclick="goPage('profile')"><span class="ni">👤</span>My Profile</div>
-        <div class="nitem" id="ni-faq" onclick="goPage('faq')"><span class="ni">❓</span>FAQ / Help</div>
+
+      <!-- ════ SECTION: REPORTS (shared) ════ -->
+      <div class="sb-group" id="sbg-reports" style="display:none">
+        <div class="sb-group-header" onclick="toggleSbGroup('sbg-reports')">
+          <span class="sbg-icon">📄</span>
+          <span class="sbg-label">Reports</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body">
+          <div class="nitem" id="ni-summary-r" onclick="goPage('summary')"><span class="ni">📄</span>Print Summary</div>
+          <div class="nitem" id="ni-compare-r" onclick="goPage('compare')"><span class="ni">📊</span>Compare &amp; Charts</div>
+        </div>
       </div>
-      <div class="credit" style="padding:12px 16px;margin-top:8px;">Designed by<br>Ujval Dharawaparmar</div>
+
+      <!-- ════ SECTION: ADMINISTRATION (admin / it_manager) ════ -->
+      <div class="sb-group" id="sbg-admin" style="display:none">
+        <div class="sb-group-header open" onclick="toggleSbGroup('sbg-admin')">
+          <span class="sbg-icon">⚙️</span>
+          <span class="sbg-label">Administration</span>
+          <span class="sbg-arrow">▾</span>
+        </div>
+        <div class="sb-group-body open">
+          <div class="nitem" id="ni-projects" onclick="goPage('projects')"><span class="ni">📁</span>Project Structure</div>
+          <div class="nitem" id="ni-fab-seq" onclick="goPage('fab-seq')"><span class="ni">🗂️</span>Fab. Sequences</div>
+          <div class="nitem" id="ni-stages" onclick="goPage('stages')"><span class="ni">⚙️</span>Stage Templates</div>
+          <div class="nitem" id="ni-users" onclick="goPage('users')"><span class="ni">👥</span>User Management</div>
+          <div class="nitem" id="ni-backup" onclick="goPage('backup')"><span class="ni">💾</span>Backup &amp; Restore</div>
+          <!-- User approvals (admin only) -->
+          <div id="admin-nav" style="display:none">
+            <div class="nitem" id="ni-user-approvals" onclick="goPage('user-approvals')"><span class="ni">🔔</span>User Approvals<span class="nbadge" id="nb-ua" style="display:none">0</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credit -->
+      <div class="sb-credit">TQIMS v47 · Ujval Dharawaparmar</div>
     </div>
 
     <!-- MAIN CONTENT -->
@@ -1025,6 +1743,34 @@ tr:hover td{background:var(--surf2);}
         <div id="dash-lv3" style="display:none;"></div>
       </div>
 
+
+      <!-- ══ FABRICATION SEQUENCES PAGE ══ -->
+      <div class="pg" id="pg-fab-seq">
+        <div class="pgh" style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <div>
+            <div class="pgt">🗂️ Fabrication Sequences</div>
+            <div class="pgs">Standard ASME / TEMA fabrication & inspection sequences by equipment type</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <select id="fab-eq-select" onchange="renderFabSeqPage()" style="padding:8px 14px;font-size:13px;border:1.5px solid var(--border2);border-radius:8px;background:var(--surf);color:var(--blue2);font-weight:600;">
+              <option value="">— Select Equipment Type —</option>
+              <option>Pressure Vessel</option>
+              <option>Heat Exchanger - U-Tube Type</option>
+              <option>Heat Exchanger - Straight Tube Type</option>
+              <option>Heat Exchanger - Stacked/Stacking Type</option>
+              <option>Piping</option>
+              <option>Support Structure</option>
+            </select>
+          </div>
+        </div>
+        <div id="fab-seq-content">
+          <div style="text-align:center;padding:60px;color:var(--text3);">
+            <div style="font-size:40px;margin-bottom:12px;">🗂️</div>
+            <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--text2);margin-bottom:8px;">Select Equipment Type</div>
+            <div style="font-size:13px;">Choose an equipment type above to view the standard fabrication and inspection sequence</div>
+          </div>
+        </div>
+      </div>
       <!-- ── SEAM DETAIL (from dashboard click) ── -->
       <div class="pg" id="pg-seam">
         <div class="back-btn" onclick="goPage('dashboard')">← Back to Dashboard</div>
@@ -1623,7 +2369,7 @@ tr:hover td{background:var(--surf2);}
         </div>
         <div>
           <label class="lbl">Client Name</label>
-          <input id="np-cl" placeholder="e.g. Qatar Energy LNG" autocomplete="off">
+          <input id="np-cl" placeholder="e.g. Client Name" autocomplete="off">
         </div>
         <div class="span2">
           <label class="lbl">Applicable Codes / Standards <span style="color:var(--text3);font-weight:400;">(comma-separated, e.g. ASME Sec.VIII Div.1 Ed-2023, TEMA)</span></label>
@@ -2102,8 +2848,14 @@ tr:hover td{background:var(--surf2);}
             <label class="lbl">Equipment Type <span style="color:var(--red)">*</span></label>
             <select id="np-eqtype" onchange="onEqTypeChange()">
               <option value="">— Select —</option>
+              <option value="">— Select Equipment Type —</option>
               <option>Pressure Vessel</option>
-              <option>Heat Exchanger</option>
+              <option>Heat Exchanger - U-Tube Type</option>
+              <option>Heat Exchanger - Straight Tube Type</option>
+              <option>Heat Exchanger - Stacked/Stacking Type</option>
+              <option>Piping</option>
+              <option>Support Structure</option>
+              <option>Manual</option>
               <option>Manual</option>
             </select>
           </div>
@@ -2269,12 +3021,13 @@ tr:hover td{background:var(--surf2);}
     <div class="mhead"><div class="mtitle">+ Add User</div><button class="mclose" onclick="closeModal('m-add-user')">✕</button></div>
     <div class="mbody">
       <div class="grid2">
-        <div><label class="lbl">Full Name</label><input id="au-name" placeholder="Full name"></div>
-        <div><label class="lbl">Mobile</label><input id="au-mob" type="tel" placeholder="Mobile number"></div>
+        <div><label class="lbl">Full Name *</label><input id="au-name" placeholder="Full name"></div>
+        <div><label class="lbl">Mobile *</label><input id="au-mob" type="tel" placeholder="Mobile number"></div>
+        <div class="span2"><label class="lbl">Email <span style="font-weight:400;color:var(--text3);">(for login via email)</span></label><input id="au-email" type="email" placeholder="user@company.com"></div>
         <div><label class="lbl">Company</label><input id="au-co" placeholder="Company name"></div>
         <div><label class="lbl">Designation</label><input id="au-desig" placeholder="e.g. QC Engineer"></div>
         <div><label class="lbl">Role</label>
-          <select id="au-role"><option value="production">Production</option><option value="quality">Quality / QC Engineer</option><option value="qa">QA Engineer</option><option value="manager">Manager</option><option value="qc_manager">QC Manager</option><option value="welding_engineer">Welding Engineer</option><option value="welding_dept">Welding Department</option><option value="welding_manager">Welding Manager</option><option value="admin">Admin</option></select>
+          <select id="au-role"><option value="production">Production</option><option value="quality">Quality / QC Engineer</option><option value="qa">QA Engineer</option><option value="manager">Manager</option><option value="qc_manager">QC Manager</option><option value="welding_engineer">Welding Engineer</option><option value="welding_dept">Welding Department</option><option value="welding_manager">Welding Manager</option><option value="it_manager">IT Manager</option><option value="admin">Admin</option></select>
         </div>
         <div><label class="lbl">Project</label><select id="au-proj"></select></div>
         <div class="span2"><label class="lbl">Password</label><input id="au-pw" type="password" placeholder="Set password"></div>
@@ -2301,8 +3054,14 @@ tr:hover td{background:var(--surf2);}
           <label class="lbl">Equipment Type</label>
           <select id="ep-eqtype">
             <option value="">— Not specified —</option>
+            <option value="">— Select Equipment Type —</option>
             <option>Pressure Vessel</option>
-            <option>Heat Exchanger</option>
+            <option>Heat Exchanger - U-Tube Type</option>
+            <option>Heat Exchanger - Straight Tube Type</option>
+            <option>Heat Exchanger - Stacked/Stacking Type</option>
+            <option>Piping</option>
+            <option>Support Structure</option>
+            <option>Manual</option>
             <option>Manual</option>
           </select>
         </div>
@@ -2435,22 +3194,163 @@ function nextRTUTReportNo(pid,tag){
 // ── Equipment Type Catalog (no subtypes — simple & clean) ──
 const EQUIPMENT_CATALOG = {
   'Pressure Vessel': {
-    icon: '🔵',
-    color: '#1d4ed8',
-    bg: '#dbeafe',
-    sections: ['Material Inspection','Pre-Fabrication','Shell Course Assembly','Head Assembly','Nozzle Fabrication & Welding','Shell Longitudinal Seams','Shell Circumferential Seams','Support / Skirt Welding','Internal Fitting','Hydrotest','Final Inspection & Painting']
+    icon: '🔵', color: '#1d4ed8', bg: '#dbeafe',
+    jointCategories: {
+      'A - Long Seam (Shell)':       {asme:'UW-3(a)(1)', desc:'Longitudinal butt joints in main shell courses'},
+      'A - Long Seam (Head)':        {asme:'UW-3(a)(1)', desc:'Longitudinal butt joints in formed heads'},
+      'B - Circ. Shell-to-Shell':    {asme:'UW-3(a)(2)', desc:'Circumferential butt joints connecting shell courses'},
+      'B - Circ. Shell-to-Head':     {asme:'UW-3(a)(2)', desc:'Circumferential butt joints connecting heads to shell'},
+      'C - Tubesheet to Shell':      {asme:'UW-3(a)(3)', desc:'Butt joints at flange face (not applicable for PV)'},
+      'D - Nozzle to Shell':         {asme:'UW-3(a)(4)', desc:'Nozzle neck butt joints to shell or head'},
+      'D - Nozzle to Head':          {asme:'UW-3(a)(4)', desc:'Nozzle neck butt joints to head'},
+      'Fillet - Nozzle RF Pad':      {asme:'UW-16',      desc:'Reinforcement pad fillet welds'},
+      'Fillet - Skirt/Support':      {asme:'UW-16',      desc:'Support/skirt attachment welds'},
+      'Fillet - Internal Attachment':{asme:'UW-16',      desc:'Internal fitting / tray support welds'},
+    },
+    fabricationSequence: [
+      {seq:'1.0', section:'Material Receipt & Inspection',     activities:['Material Receipt & TC Verification','Dimensional Check — Plates & Forgings','PMI (Positive Material Identification)','Hardness Check (If Required)']},
+      {seq:'2.0', section:'Pre-Fabrication',                   activities:['Fit-up & Dimensional Check of Formed Plates','WEP (Weld Edge Preparation) Check','Root Gap & Alignment Check']},
+      {seq:'3.0', section:'Shell Long Seam (Cat A)',           activities:['Fit-up Inspection','Root Run Visual/PT/MT','Complete Weld Visual/PT/MT','RT/UT (as per code)','Dimensional Check after Welding']},
+      {seq:'4.0', section:'Shell Circ. Seam (Cat B)',          activities:['Shell Course Assembly','Fit-up Inspection','Root Run PT/MT','Complete Weld PT/MT','RT/UT (as per code)']},
+      {seq:'5.0', section:'Head Assembly',                     activities:['Head Fit-up & Dimensional Check','Head Long Seam Welding','Head to Shell Circ. Seam Fit-up','Head to Shell Welding','RT/UT on Head Seams']},
+      {seq:'6.0', section:'Nozzle Fabrication & Welding',      activities:['Nozzle Location Marking','Nozzle Fit-up Inspection','Nozzle Welding Root/Complete Visual/PT/MT','RF Pad Fit-up & Welding','RF Pad Air Test (3.5 bar)']},
+      {seq:'7.0', section:'Support / Skirt Welding',           activities:['Skirt/Saddle Fit-up Inspection','Skirt/Saddle Welding & Visual Check','Lug & Lifting Device Welding']},
+      {seq:'8.0', section:'Internal & External Attachments',   activities:['Internal Tray Support Fitting','Internal Fitting Weld Inspection','External Attachment Welds Inspection']},
+      {seq:'9.0', section:'Pre-Hydrotest Activities',           activities:['PWHT (If Required) — Cycle Chart Review','Post-PWHT Hardness Test','Post-PWHT RT/UT (If Required)','Flange Face Inspection','Nozzle Orientation Final Check','Torquing of Test Flanges']},
+      {seq:'10.0',section:'Hydrotest',                          activities:['Hydrotest (1.3 × MAWP per ASME Sec. VIII Div.1)','Hydrotest Acceptance — Visual Inspection','Draining & Drying']},
+      {seq:'11.0',section:'Final Inspection',                   activities:['Final Dimensional Inspection','Surface Blasting & Painting Inspection','Name Plate & Stamping Verification','IRN Inspection (TPI/Client Witness)','Release for Dispatch']},
+    ],
+    sections: ['Shell Long Seam (Cat A)','Shell Circ. Seam (Cat B)','Head Assembly','Nozzle Welding (Cat D)','Skirt/Support Welding','Internal Attachments','Hydrotest','Final Inspection']
   },
-  'Heat Exchanger': {
-    icon: '🔶',
-    color: '#b45309',
-    bg: '#fef3c7',
-    sections: ['Material Inspection','Pre-Fabrication','Shell Side','Channel Side','Tube Bundle Assembly','Nozzle Fabrication & Welding','Tubesheet to Shell Welding','Baffle & Support Assembly','Hydrotest (Shell Side)','Hydrotest (Tube Side)','Final Inspection & Painting']
+
+  'Heat Exchanger - U-Tube Type': {
+    icon: '🔶', color: '#b45309', bg: '#fef3c7',
+    jointCategories: {
+      'A - Shell Long Seam':         {asme:'UW-3(a)(1)', desc:'Longitudinal shell seams'},
+      'B - Shell Circ. Seam':        {asme:'UW-3(a)(2)', desc:'Circumferential shell course joints'},
+      'B - Shell to Channel':        {asme:'UW-3(a)(2)', desc:'Shell to channel flange circ. joints'},
+      'C - Tubesheet to Shell':      {asme:'UW-3(a)(3)', tema:'TEMA RGP-T-3.3', desc:'Tubesheet to shell butt/fillet joint'},
+      'D - Nozzle to Shell/Channel': {asme:'UW-3(a)(4)', desc:'Nozzle attachment welds'},
+      'Tube-to-Tubesheet':           {asme:'ASME Sec.IX', tema:'TEMA RC-7.62', desc:'Tube to tubesheet expansion/welding'},
+      'Fillet - RF Pad':             {asme:'UW-16',      desc:'Reinforcement pad fillet welds'},
+      'Fillet - Support':            {asme:'UW-16',      desc:'Saddle/support attachment welds'},
+    },
+    fabricationSequence: [
+      {seq:'1.0', section:'Material Receipt & Inspection',     activities:['Material Receipt & TC Verification — Shell Components','Material Receipt & TC Verification — Tube Bundle Parts','PMI (If Required)','Tubesheet & Baffles Dimensional Check']},
+      {seq:'2.0', section:'Shell Side Pre-Fabrication',        activities:['Shell Plate Forming & Dimensional Check','WEP Inspection for Shell Seams']},
+      {seq:'3.0', section:'Tube Side Pre-Fabrication',         activities:['Channel Plate Forming & Dimensional Check','Tubesheet Facing & Hole Pattern Inspection','Baffle/Support Plate Drilling Check']},
+      {seq:'4.0', section:'Shell Long Seam (Cat A)',           activities:['Shell Long Seam Fit-up','Root Run PT/MT','Complete Weld PT/MT','RT/UT per ASME Sec.VIII']},
+      {seq:'5.0', section:'Shell Circ. Seam (Cat B)',          activities:['Shell Course Assembly Fit-up','Complete Weld PT/MT','RT/UT per code']},
+      {seq:'6.0', section:'Channel Section Fabrication',       activities:['Channel Plate Long Seam','Channel Circ. Seam','Channel Cover Inspection']},
+      {seq:'7.0', section:'Tubesheet to Shell Welding (Cat C)',activities:['Tubesheet Fit-up Inspection','Tubesheet Root Run PT/MT','Complete Weld PT/MT']},
+      {seq:'8.0', section:'Tube Bundle Assembly',              activities:['Tube Insertion Inspection','Tube-to-Tubesheet Expansion/Welding','Tube Weld PT (If Required)','Baffle Spacing & Tie Rod Check']},
+      {seq:'9.0', section:'U-Tube Bending & Assembly',         activities:['U-Tube Bend Inspection','U-Tube to Tubesheet Fit-up','Tube-to-Tubesheet Weld/Expand Inspection']},
+      {seq:'10.0',section:'Nozzle Welding (Cat D)',             activities:['Shell Side Nozzle Fit-up','Tube Side Nozzle Fit-up','Complete Nozzle Weld PT/MT','RF Pad Air Test']},
+      {seq:'11.0',section:'Pre-Hydrotest Activities',           activities:['PWHT (If Required)','Post-PWHT Hardness & NDT','Flange Face Inspection','Torquing of Test Flanges']},
+      {seq:'12.0',section:'Hydrotest — Shell Side',             activities:['Shell Side Hydrotest','Shell Side Acceptance Check']},
+      {seq:'13.0',section:'Hydrotest — Tube Side',              activities:['Tube Side Hydrotest (1.3×MAWP)','Tube Side Acceptance Check','Draining & Drying']},
+      {seq:'14.0',section:'Final Inspection',                   activities:['Final Dimensional Inspection','Painting Inspection','Name Plate Verification','IRN Inspection','Release for Dispatch']},
+    ],
+    sections: ['Shell Long Seam (Cat A)','Shell Circ. Seam (Cat B)','Channel Fabrication','Tubesheet to Shell (Cat C)','Tube Bundle Assembly','Nozzle Welding (Cat D)','Shell Side Hydrotest','Tube Side Hydrotest','Final Inspection']
   },
+
+  'Heat Exchanger - Straight Tube Type': {
+    icon: '🟠', color: '#c2410c', bg: '#fff7ed',
+    jointCategories: {
+      'A - Shell Long Seam':         {asme:'UW-3(a)(1)', desc:'Longitudinal shell seams'},
+      'B - Shell Circ. Seam':        {asme:'UW-3(a)(2)', desc:'Circumferential shell joints'},
+      'B - Shell to Channel':        {asme:'UW-3(a)(2)', desc:'Shell to channel circ. joints'},
+      'C - Tubesheet (Fixed)':       {asme:'UW-3(a)(3)', tema:'TEMA RGP-T-3.3', desc:'Fixed tubesheet to shell'},
+      'C - Tubesheet (Floating)':    {asme:'UW-3(a)(3)', tema:'TEMA RGP-T-3.4', desc:'Floating tubesheet assembly'},
+      'D - Nozzle':                  {asme:'UW-3(a)(4)', desc:'Nozzle attachment welds'},
+      'Tube-to-Tubesheet':           {asme:'ASME Sec.IX', desc:'Tube to tubesheet welded joints'},
+      'Fillet - RF Pad / Support':   {asme:'UW-16',      desc:'Fillet welds for RF pads and supports'},
+    },
+    fabricationSequence: [
+      {seq:'1.0', section:'Material Receipt & Inspection',     activities:['TC Verification — Shell Plates, Tubes, TS, Baffles','PMI (If Required)','Tube OD/WT/Length Check']},
+      {seq:'2.0', section:'Shell Fabrication',                 activities:['Shell Long Seam (Cat A)','Shell Circ. Seam (Cat B)']},
+      {seq:'3.0', section:'Channel Fabrication',               activities:['Channel Long Seam','Channel Circ. Seam','Channel Cover Inspection']},
+      {seq:'4.0', section:'Fixed Tubesheet Welding (Cat C)',   activities:['Tubesheet Fit-up Inspection','Tubesheet to Shell Weld Inspection','PT/MT on Tubesheet Weld']},
+      {seq:'5.0', section:'Floating Head Assembly',            activities:['Floating Head Fit-up','Floating Head Weld Inspection']},
+      {seq:'6.0', section:'Tube Bundle Assembly',              activities:['Tube Insertion','Tube-to-Tubesheet Weld/Expansion','Baffle/Support Plate Assembly','Tie Rod & Spacer Check']},
+      {seq:'7.0', section:'Nozzle Welding (Cat D)',             activities:['Nozzle Fit-up & Welding','PT/MT & RF Pad Test']},
+      {seq:'8.0', section:'Pre-Hydrotest',                     activities:['PWHT (If Required)','Flange Face Inspection','Torquing']},
+      {seq:'9.0', section:'Hydrotest — Shell Side',             activities:['Shell Side Hydrotest','Acceptance Check']},
+      {seq:'10.0',section:'Hydrotest — Tube Side',              activities:['Tube Side Hydrotest','Acceptance Check','Draining & Drying']},
+      {seq:'11.0',section:'Final Inspection',                   activities:['Dimensional Check','Painting Inspection','IRN & Dispatch Release']},
+    ],
+    sections: ['Shell Fabrication (Cat A/B)','Channel Fabrication','Tubesheet to Shell (Cat C)','Tube Bundle Assembly','Nozzle Welding (Cat D)','Shell Side Hydrotest','Tube Side Hydrotest','Final Inspection']
+  },
+
+  'Heat Exchanger - Stacked/Stacking Type': {
+    icon: '🟡', color: '#d97706', bg: '#fefce8',
+    jointCategories: {
+      'A - Shell Long Seam':    {asme:'UW-3(a)(1)', desc:'Longitudinal shell seams per shell unit'},
+      'B - Shell Circ. Seam':  {asme:'UW-3(a)(2)', desc:'Circumferential seams between courses'},
+      'C - Tubesheet':         {asme:'UW-3(a)(3)', tema:'TEMA RGP-T-3.3', desc:'Tubesheet to shell welds'},
+      'D - Nozzle':            {asme:'UW-3(a)(4)', desc:'Nozzle attachment welds'},
+      'Tube-to-Tubesheet':     {asme:'ASME Sec.IX', desc:'Tube to tubesheet welds'},
+      'Fillet - Support':      {asme:'UW-16', desc:'Support & saddle attachment welds'},
+    },
+    fabricationSequence: [
+      {seq:'1.0', section:'Material Receipt — All Units',       activities:['TC Verification for each Shell Unit','Tube and TS material check']},
+      {seq:'2.0', section:'Shell Fabrication (Each Unit)',      activities:['Shell Long Seam (Cat A) — per unit','Shell Circ. Seam (Cat B) — per unit']},
+      {seq:'3.0', section:'Tubesheet Welding (Cat C)',          activities:['TS to Shell fit-up & welding per unit','PT/MT on TS welds']},
+      {seq:'4.0', section:'Tube Bundle Assembly (Each Unit)',   activities:['Tube insertion & expansion/welding','Baffle assembly per unit']},
+      {seq:'5.0', section:'Nozzle Welding (Cat D)',             activities:['Nozzle welding on each unit','PT/MT & RF pad test']},
+      {seq:'6.0', section:'Stacking & Inter-connecting',        activities:['Unit alignment & stacking inspection','Inter-connecting flange fit-up inspection']},
+      {seq:'7.0', section:'Pre-Hydrotest',                     activities:['PWHT (If Required)','Torquing of test flanges']},
+      {seq:'8.0', section:'Hydrotest — Combined',               activities:['Shell Side Hydrotest','Tube Side Hydrotest','Acceptance Inspection','Draining & Drying']},
+      {seq:'9.0', section:'Final Inspection',                   activities:['Final Dimensional Check','Painting Inspection','IRN & Dispatch Release']},
+    ],
+    sections: ['Shell Fabrication (Cat A/B)','Tubesheet to Shell (Cat C)','Tube Bundle Assembly','Nozzle Welding (Cat D)','Stacking & Inter-connecting','Hydrotest','Final Inspection']
+  },
+
+  'Piping': {
+    icon: '🟢', color: '#047857', bg: '#ecfdf5',
+    jointCategories: {
+      'BW - Butt Weld (Circ.)': {asme:'ASME B31.3 304.2', desc:'Circumferential butt welds on pipe'},
+      'SW - Socket Weld':       {asme:'ASME B31.3 308',   desc:'Socket weld fittings'},
+      'FW - Fillet (Branch)':   {asme:'ASME B31.3 304.3', desc:'Branch connection fillet welds'},
+      'Flange Attachment':      {asme:'ASME B31.3 308.2', desc:'Flange to pipe weld joints'},
+      'Seal Weld':              {asme:'ASME B31.3',        desc:'Threaded connection seal welds'},
+    },
+    fabricationSequence: [
+      {seq:'1.0', section:'Material Receipt & Inspection',   activities:['Pipe, Fitting & Flange TC Verification','Dimensional & PMI Check']},
+      {seq:'2.0', section:'Spool Fabrication',               activities:['Spool Drawing Mark-up Review','Cutting & WEP Inspection','Fit-up & Alignment Check']},
+      {seq:'3.0', section:'Welding — Butt Welds (BW)',       activities:['Root Run Visual/PT/MT','Complete Weld Visual/PT/MT','RT/UT as per P&ID / Code']},
+      {seq:'4.0', section:'Welding — Socket & Fillet Welds', activities:['Fit-up Inspection','Complete Weld Visual/MT']},
+      {seq:'5.0', section:'PWHT (If Required)',               activities:['PWHT Cycle Review & Approval','Post-PWHT Hardness Test']},
+      {seq:'6.0', section:'NDT Final',                        activities:['Final RT/UT on BW joints','Spool Dimensional Check After PWHT']},
+      {seq:'7.0', section:'Hydrostatic Test',                 activities:['Hydrostatic Test (1.5×Design Pressure)','Acceptance Inspection']},
+      {seq:'8.0', section:'Final Inspection',                 activities:['Painting Inspection','Spool Release for Erection']},
+    ],
+    sections: ['Spool Fabrication','Butt Weld Joints (BW)','Socket/Fillet Welds','PWHT (If Applicable)','NDT Final','Hydrotest','Final Inspection']
+  },
+
+  'Support Structure': {
+    icon: '⬜', color: '#374151', bg: '#f9fafb',
+    jointCategories: {
+      'Fillet - Primary Member':   {asme:'AWS D1.1', desc:'Primary structural fillet welds'},
+      'Fillet - Secondary Member': {asme:'AWS D1.1', desc:'Secondary structural attachment welds'},
+      'BW - Structural Butt Weld': {asme:'AWS D1.1', desc:'Structural butt welds (full penetration)'},
+      'Stud/Clip Weld':            {asme:'AWS D1.1', desc:'Stud and clip weld joints'},
+    },
+    fabricationSequence: [
+      {seq:'1.0', section:'Material Receipt',                 activities:['TC Verification for Structural Steel','Dimensional Check of Plates, Beams, Channels']},
+      {seq:'2.0', section:'Member Preparation',              activities:['Cutting & Fabrication Dimensional Check','WEP for Full Penetration Joints']},
+      {seq:'3.0', section:'Assembly & Fit-up',               activities:['Fit-up Inspection of Primary Members','Fit-up Inspection of Secondary Members']},
+      {seq:'4.0', section:'Welding',                          activities:['Root/Complete Weld Visual Inspection','MT on Full Penetration Welds','Weld Size & Length Check']},
+      {seq:'5.0', section:'NDT (If Required)',                activities:['MT/PT on Critical Welds','UT on Full Pen. Welds (If Specified)']},
+      {seq:'6.0', section:'Dimensional Inspection',           activities:['Overall Dimension & Verticality Check','Anchor Bolt Pattern Check']},
+      {seq:'7.0', section:'Surface Treatment & Final',        activities:['Blasting & Painting Inspection','Final Dimensional Report','Release for Dispatch']},
+    ],
+    sections: ['Member Preparation','Primary Structure Welding','Secondary Member Welding','NDT (If Required)','Dimensional Inspection','Painting','Final Inspection']
+  },
+
   'Manual': {
-    icon: '⚙️',
-    color: '#374151',
-    bg: '#f3f4f6',
-    sections: []
+    icon: '⚙️', color: '#374151', bg: '#f3f4f6', sections: [],
+    fabricationSequence: [], jointCategories: {}
   }
 };
 
@@ -2477,7 +3377,10 @@ function defaultDB() {
   return {
     projects:[],
     seams:[],
-    users:[{id:'u0',name:'Admin User',mob:'0000000000',email:'',co:'TQIMS',desig:'System Admin',role:'admin',pid:'',pw:'admin123',approved:true,signature:''}],
+    users:[
+      {id:'u0',   name:'Admin User', mob:'0000000000',email:'',co:'TQIMS',desig:'System Admin',role:'admin',        pid:'',pw:'admin123',   approved:true,signature:''},
+      {id:'u_itm',name:'IT Manager', mob:'9999999999',email:'it.manager@tqims.com',co:'TQIMS',desig:'IT Manager',role:'it_manager',pid:'',pw:'TQIMS@IT2024',approved:true,signature:''}
+    ],
     templates:[{id:'t1',name:'Standard Weld Inspection',stages:DEFAULT_STAGES.slice()}],
     log:[],
     pendingActions:[],
@@ -2509,8 +3412,15 @@ function _migrateDB(p){
   if(!p.releases) p.releases={};
   if(!p.tagCats) p.tagCats={};
   if(!p.tagNums) p.tagNums={};
-  if(p.users) p.users.forEach(u=>{ if(!u.signature) u.signature=''; });
+  if(!p.users) p.users=[];
+  p.users.forEach(u=>{ if(!u.signature) u.signature=''; });
   if(!p.welding_config) p.welding_config={processes:['SMAW','GTAW','GMAW','FCAW','SAW','GTAW+SMAW','SMAW+SAW','GTAW+SMAW+SAW'],positions:['1G','2G','3G','4G','5G','6G','1F','2F','3F','4F'],contractors:[],p_numbers:['P1','P3','P4','P5A','P8','P9A'],wps_mapping:[]};
+  // Always guarantee master Admin (u0)
+  if(!p.users.find(u=>u.id==='u0'))
+    p.users.unshift({id:'u0',name:'Admin User',mob:'0000000000',email:'',co:'TQIMS',desig:'System Admin',role:'admin',pid:'',pw:'admin123',approved:true,signature:''});
+  // Always guarantee IT Manager (u_itm)
+  if(!p.users.find(u=>u.id==='u_itm'))
+    p.users.push({id:'u_itm',name:'IT Manager',mob:'9999999999',email:'it.manager@tqims.com',co:'TQIMS',desig:'IT Manager',role:'it_manager',pid:'',pw:'TQIMS@IT2024',approved:true,signature:''});
   return p;
 }
 const SUPA_URL = 'https://wjfrpmnjpsukmrzjkrav.supabase.co';
@@ -2569,7 +3479,15 @@ async function loadFromSupabase(){
     }
   } catch(e){
     console.error('TQIMS load exception', e);
-    _showNetworkError('Could not reach database. Check internet connection.');
+    DB = _migrateDB(Object.assign(defaultDB(), {}));
+    console.warn('TQIMS: DB unavailable — local fallback. Login still works.');
+    const _ov=document.getElementById('supa-loading');
+    if(_ov){
+      const _w=document.createElement('div');
+      _w.style.cssText='position:fixed;bottom:0;left:0;right:0;background:linear-gradient(90deg,#fef3c7,#fffbeb);color:#92400e;font-size:11px;text-align:center;padding:7px;z-index:99999;border-top:1px solid #f59e0b;font-weight:600;';
+      _w.textContent='⚠ Database offline — working in local mode. Changes will not sync until connection restored.';
+      document.body.appendChild(_w); setTimeout(()=>_w.remove(),10000);
+    }
   }
 }
 
@@ -2577,7 +3495,7 @@ function _showLocalFileError(){
   // Show a full-screen message when opened as a local file
   document.addEventListener('DOMContentLoaded', ()=>{
     const ov = document.getElementById('supa-loading');
-    if(ov) ov.innerHTML = `<div style="position:fixed;inset:0;z-index:99999;background:#0f172a;
+    if(ov) ov.innerHTML = `<div style="position:fixed;inset:0;z-index:99999;background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 60%,#e0f2fe 100%);
       display:flex;flex-direction:column;align-items:center;justify-content:center;
       gap:18px;padding:24px;text-align:center;">
       <div style="font-size:36px;font-weight:900;letter-spacing:6px;color:#60a5fa;">TQIMS</div>
@@ -2585,16 +3503,16 @@ function _showLocalFileError(){
       <div style="font-size:15px;font-weight:700;color:#f87171;max-width:340px;line-height:1.6;">
         Cannot connect to database
       </div>
-      <div style="font-size:13px;color:#94a3b8;max-width:360px;line-height:1.8;">
+      <div style="font-size:13px;color:#64748b;max-width:360px;line-height:1.8;">
         You are opening this file <strong style="color:#fbbf24;">directly from your phone or computer</strong>.
         TQIMS must be opened from the web to connect to the live database.<br><br>
         <strong style="color:#a3e635;">Open this URL in your browser instead:</strong>
       </div>
-      <div style="background:#1e3a5f;border:1px solid #3b82f6;border-radius:10px;padding:12px 20px;
-        font-family:monospace;font-size:14px;color:#60a5fa;word-break:break-all;max-width:340px;">
+      <div style="background:#dbeafe;border:1px solid #3b82f6;border-radius:10px;padding:12px 20px;
+        font-family:monospace;font-size:14px;color:#1d4ed8;word-break:break-all;max-width:340px;">
         https://YOUR-GITHUB-USERNAME.github.io/TQIMS/
       </div>
-      <div style="font-size:12px;color:#64748b;max-width:340px;line-height:1.7;">
+      <div style="font-size:12px;color:#475569;max-width:340px;line-height:1.7;">
         Ask your Admin for the exact URL, or upload this file to GitHub Pages and use that link.
       </div>
     </div>`;
@@ -2603,13 +3521,13 @@ function _showLocalFileError(){
 
 function _showNetworkError(msg){
   const ov = document.getElementById('supa-loading');
-  if(ov) ov.innerHTML = `<div style="position:fixed;inset:0;z-index:99999;background:#0f172a;
+  if(ov) ov.innerHTML = `<div style="position:fixed;inset:0;z-index:99999;background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 60%,#e0f2fe 100%);
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     gap:16px;padding:24px;text-align:center;">
     <div style="font-size:36px;font-weight:900;letter-spacing:6px;color:#60a5fa;">TQIMS</div>
     <div style="font-size:20px;">&#x26a0;&#xfe0f;</div>
     <div style="font-size:15px;font-weight:700;color:#f87171;">Database Connection Failed</div>
-    <div style="font-size:12px;color:#94a3b8;max-width:340px;line-height:1.7;">${msg}</div>
+    <div style="font-size:12px;color:#475569;max-width:340px;line-height:1.7;">${msg}</div>
     <button onclick="location.reload()" style="padding:10px 28px;background:#1d4ed8;color:#fff;
       border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;">
       &#x21ba; Retry
@@ -2768,13 +3686,13 @@ function _showTimeoutWarning(){
     _timeoutWarningEl.id = 'timeout-warning';
     _timeoutWarningEl.innerHTML = `
       <div style="position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:99998;
-        background:#1e293b;color:#f8fafc;border:2px solid #f59e0b;border-radius:12px;
+        background:#fff;color:#1e293b;border:2px solid #f59e0b;box-shadow:0 8px 32px rgba(0,0,0,.15);border-radius:12px;
         padding:14px 20px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;
         box-shadow:0 8px 32px rgba(0,0,0,.5);display:flex;align-items:center;gap:12px;min-width:280px;">
         <span style="font-size:20px;">⏱</span>
         <div style="flex:1;">
           <div>Session expiring in <span id="timeout-countdown">60</span>s due to inactivity</div>
-          <div style="font-size:11px;font-weight:400;color:#94a3b8;margin-top:2px;">Tap anywhere or press Stay to remain logged in</div>
+          <div style="font-size:11px;font-weight:400;color:#64748b;margin-top:2px;">Tap anywhere or press Stay to remain logged in</div>
         </div>
         <button onclick="_resetInactivity()" style="background:#f59e0b;color:#1e293b;border:none;
           border-radius:7px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer;">
@@ -2972,23 +3890,16 @@ function loginAs(u, silent=false){
   $('hdr-role').className='rpill rp-'+u.role;
   $('hdr-role').textContent=u.role.toUpperCase();
   $('hdr-name').textContent=u.name;
-  $('admin-nav').style.display=u.role==='admin'?'block':'none';
-  $('manager-nav').style.display=u.role==='manager'?'block':'none';
-  const weldNav=$('welding-nav');
-  if(weldNav) weldNav.style.display=(u.role==='welding_engineer'||u.role==='welding_dept'||u.role==='admin')?'block':'none';
-  const weldMgrNav=$('weldmgr-nav');
-  if(weldMgrNav) weldMgrNav.style.display=(u.role==='welding_manager'||u.role==='admin')?'block':'none';
-  const qcMgrNav=$('qcmgr-nav');
-  if(qcMgrNav) qcMgrNav.style.display=(u.role==='qc_manager'||u.role==='admin')?'block':'none';
-  const qaNav=$('qa-nav');
-  if(qaNav) qaNav.style.display=(u.role==='qa'||u.role==='quality'||u.role==='admin')?'block':'none';
+  // ── Update user card in sidebar ──
+  _updateSbUserCard(u);
+  // ── Show/hide role-grouped sidebar sections ──
+  _setupSidebarGroups(u.role);
   const warnBtn=$('storage-warn-admin');
-  if(warnBtn) warnBtn.style.display=u.role==='admin'?'block':'none';
+  if(warnBtn) warnBtn.style.display=(u.role==='admin'||u.role==='it_manager')?'block':'none';
   const goB=$('btn-group-offer'),giB=$('btn-group-inspect');
   if(goB) goB.style.display=(u.role==='production')?'block':'none';
   if(giB) giB.style.display=(u.role==='quality'||u.role==='qa'||u.role==='qc_manager')?'block':'none';
-  const uaNav=document.getElementById('ni-user-approvals');
-  if(uaNav) uaNav.parentElement.style.display=u.role==='admin'?'block':'none';
+  // User approvals badge managed by _setupSidebarGroups
   populateSelects();
   updateApprovalBadge();
   updateMIRBadge();
@@ -3026,6 +3937,7 @@ function goPage(pg){
   if(pg==='dashboard')         renderDashboard();
   else if(pg==='inspection')  {renderInspection();updateBadge();}
   else if(pg==='log')          renderLog();
+  else if(pg==='fab-seq')      renderFabSeqPage();
   else if(pg==='projects')     renderProjectsPage();
   else if(pg==='stages')       renderStagesPage();
   else if(pg==='users')        renderUsers();
@@ -5346,8 +6258,12 @@ function removeStage(tid,i){
 // ══════════════════════════════════════════════════════════════
 function renderUsers(){
   $('user-tbody').innerHTML=DB.users.map(u=>`<tr>
-    <td><strong>${u.name}</strong></td>
-    <td style="font-family:'JetBrains Mono',monospace;font-size:11px;">${u.mob}</td>
+    <td>
+      <strong>${u.name}</strong>
+      ${u.id==='u_itm'?'<span style="font-size:9px;margin-left:5px;padding:1px 7px;background:#ede9fe;color:#5b21b6;border-radius:10px;border:1px solid #8b5cf6;vertical-align:middle;">IT</span>':''}
+      ${u.id==='u0'?'<span style="font-size:9px;margin-left:5px;padding:1px 7px;background:#fef3c7;color:#92400e;border-radius:10px;border:1px solid #f59e0b;vertical-align:middle;">SYS</span>':''}
+    </td>
+    <td style="font-family:'JetBrains Mono',monospace;font-size:11px;">${u.mob}${u.email?'<br><span style="color:var(--text4);font-size:10px;">'+u.email+'</span>':''}</td>
     <td>${u.co||'—'}</td>
     <td style="font-size:11px;">${u.desig||'—'}</td>
     <td><span class="rpill rp-${u.role}" style="font-size:8px;">${u.role}</span></td>
@@ -5356,19 +6272,26 @@ function renderUsers(){
     <td>
       <div style="display:flex;gap:4px;flex-wrap:wrap;">
         ${!u.approved?`<button class="abtn ab-green" onclick="approveUser('${u.id}')">APPROVE</button>`:''}
-        <button class="abtn ab-amber" onclick="changeRole('${u.id}')">ROLE</button>
-        ${u.id!=='u0'?`<button class="abtn ab-red" onclick="delUser('${u.id}')">DEL</button>`:''}
+        ${(u.id!=='u0'&&u.id!=='u_itm')?`<button class="abtn ab-amber" onclick="changeRole('${u.id}')">ROLE</button>`:''}
+        ${(u.id!=='u0'&&u.id!=='u_itm')?`<button class="abtn ab-red" onclick="delUser('${u.id}')">DEL</button>`:''}
       </div>
     </td>
   </tr>`).join('');
 }
 
 function adminAddUser(){
-  const name=$('au-name').value.trim(),mob=$('au-mob').value.trim(),pw=$('au-pw').value;
+  const name=$('au-name').value.trim();
+  const mob=$('au-mob').value.trim();
+  const pw=$('au-pw').value;
+  const email=($('au-email')?$('au-email').value.trim().toLowerCase():'');
   if(!name||!mob||!pw){toast('Name, mobile and password required','err');return;}
   if(DB.users.find(u=>u.mob===mob)){toast('Mobile already registered','err');return;}
-  DB.users.push({id:'u'+Date.now(),name,mob,email:'',co:$('au-co').value.trim(),desig:$('au-desig').value.trim(),role:$('au-role').value,pid:$('au-proj').value,pw,approved:true});
-  log(`👤 USER ADDED — ${name}`);save();closeModal('m-add-user');renderUsers();toast('User added','ok');
+  if(email&&DB.users.find(u=>u.email&&u.email.toLowerCase()===email)){toast('Email already registered','err');return;}
+  const role=$('au-role').value;
+  DB.users.push({id:'u'+Date.now(),name,mob,email,co:$('au-co').value.trim(),desig:$('au-desig').value.trim(),role,pid:$('au-proj').value,pw,approved:true,signature:''});
+  log('👤 USER ADDED — '+name+' ('+role+')');
+  save();closeModal('m-add-user');renderUsers();toast('User added — '+name,'ok');
+  ['au-name','au-mob','au-email','au-co','au-desig','au-pw'].forEach(id=>{const el=$(id);if(el)el.value='';});
 }
 
 function approveUser(id){
@@ -5378,9 +6301,11 @@ function approveUser(id){
 
 function changeRole(id){
   const u=DB.users.find(u=>u.id===id);
-  const r=prompt('New role (admin/production/quality/manager):',u.role);
-  if(!r||!['admin','production','quality','manager'].includes(r)){toast('Invalid role','err');return;}
-  u.role=r;log(`🔄 ROLE CHANGED — ${u.name} → ${r}`);save();renderUsers();toast('Role updated','ok');
+  const ALL=['admin','production','quality','qa','manager','qc_manager','welding_engineer','welding_dept','welding_manager','it_manager'];
+  const r=prompt('New role — choose from:\n'+ALL.join(' | '),u.role);
+  if(!r||!ALL.includes(r.trim())){toast('Invalid role','err');return;}
+  u.role=r.trim();
+  log('🔄 ROLE CHANGED — '+u.name+' → '+u.role);save();renderUsers();toast('Role updated','ok');
 }
 
 function delUser(id){
@@ -5693,7 +6618,7 @@ function buildPrintPreview(){
             <td style="padding:4px 6px;border:1px solid #e2e8f0;text-align:center;">${seam.wps||'—'}</td>
             ${stageNames.map(n=>{
               const st=seam.stages.find(s=>s.name===n);
-              if(!st) return`<td style="padding:3px;border:1px solid #e2e8f0;text-align:center;background:#f1f5f9;color:#94a3b8;font-size:7px;">N/A</td>`;
+              if(!st) return`<td style="padding:3px;border:1px solid #e2e8f0;text-align:center;background:#f1f5f9;color:#64748b;font-size:7px;">N/A</td>`;
               const bgC=st.status==='accepted'?'#f0fdf4':st.status==='rejected'?'#fef2f2':st.status==='offered'?'#fffbeb':st.status==='returned'?'#eff6ff':'#fff';
               const txtC=st.status==='accepted'?'#059669':st.status==='rejected'?'#dc2626':st.status==='offered'?'#d97706':st.status==='returned'?'#2563eb':'#6b7280';
               const lbl=st.status==='accepted'?'✓ ACC':st.status==='rejected'?'✗ NCR':st.status==='offered'?'⬆ QC':st.status==='returned'?'↩ RET':'○ PND';
@@ -5701,14 +6626,14 @@ function buildPrintPreview(){
               const dtShort=dt?dt.split(',')[0]:'';
               return`<td style="padding:3px 2px;border:1px solid #e2e8f0;text-align:center;background:${bgC};">
                 <div style="font-weight:700;color:${txtC};font-size:7px;">${lbl}</div>
-                ${dtShort?`<div style="font-size:5.5px;color:#94a3b8;margin-top:1px;">${dtShort}</div>`:''}
+                ${dtShort?`<div style="font-size:5.5px;color:#64748b;margin-top:1px;">${dtShort}</div>`:''}
                 ${(st.itpTable||st.itpAnnex||st.itpClause||st.itpRef)?`<div style="font-size:5px;color:#64748b;margin-top:1px;border-top:1px dashed #cbd5e1;padding-top:1px;line-height:1.3;">${st.itpTable?'T:'+st.itpTable+' ':''
 }${st.itpAnnex?'A:'+st.itpAnnex+' ':''}${st.itpClause?'C:'+st.itpClause:st.itpRef||''}</div>`:''}
               </td>`;
             }).join('')}
             <td style="padding:4px 6px;border:1px solid #e2e8f0;text-align:center;font-weight:700;font-size:8px;color:${ss.pct===100?'#059669':'#d97706'};">${ss.pct}%</td>
             <td style="padding:4px 6px;border:1px solid #e2e8f0;font-size:7px;color:#374151;">${ncrNums||allRem||'—'}</td>
-            <td style="padding:4px 6px;border:1px solid #e2e8f0;text-align:center;font-size:7px;color:#94a3b8;">________</td>
+            <td style="padding:4px 6px;border:1px solid #e2e8f0;text-align:center;font-size:7px;color:#64748b;">________</td>
           </tr>`;
         }).join('')}
         </tbody>
@@ -8339,9 +9264,9 @@ function faqToggle(id){
 document.addEventListener('DOMContentLoaded',()=>{
   const overlay=document.createElement('div');
   overlay.id='supa-loading';
-  overlay.innerHTML=`<div style="position:fixed;inset:0;z-index:99999;background:#0f172a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;">
+  overlay.innerHTML=`<div style="position:fixed;inset:0;z-index:99999;background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 60%,#e0f2fe 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;">
     <div style="font-size:36px;font-weight:900;letter-spacing:6px;color:#60a5fa;">TQIMS</div>
-    <div style="font-size:13px;color:#94a3b8;letter-spacing:2px;">Connecting to database…</div>
+    <div style="font-size:13px;color:#64748b;letter-spacing:2px;">Connecting to database…</div>
     <div style="width:48px;height:48px;border:4px solid #1e3a5f;border-top-color:#60a5fa;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
     <style>@keyframes spin{to{transform:rotate(360deg);}}</style>
   </div>`;
@@ -13163,6 +14088,91 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.qu
 document.addEventListener('click',function(e){if(e.target.classList.contains('modal-page')){e.target.classList.remove('on');document.body.style.overflow='';}});
 
 function filterMobile(el){el.value=el.value.replace(/[^0-9]/g,"").slice(0,10);}
+
+
+// ── Confirmation dialog helper ──
+function confirmAction(msg, onOk, onCancel){
+  if(window.confirm(msg + '\n\nPress OK to confirm, Cancel to abort.'))
+    { if(onOk) onOk(); }
+  else
+    { if(onCancel) onCancel(); }
+}
+
+// ══════════════════════════════════════════════════
+// SIDEBAR GROUP TOGGLE
+// ══════════════════════════════════════════════════
+function toggleSbGroup(id) {
+  const grp = document.getElementById(id);
+  if (!grp) return;
+  const hdr  = grp.querySelector('.sb-group-header');
+  const body = grp.querySelector('.sb-group-body');
+  if (!hdr || !body) return;
+  const isOpen = body.classList.contains('open');
+  hdr.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+
+// ── Update sidebar user identity card ──
+function _updateSbUserCard(u) {
+  const nameEl = document.getElementById('sb-user-name');
+  const roleEl = document.getElementById('sb-user-role');
+  const avEl   = document.getElementById('sb-user-avatar');
+  if (nameEl) nameEl.textContent = u.name || '—';
+  if (roleEl) roleEl.textContent = u.role.replace(/_/g,' ').toUpperCase();
+  if (avEl)   avEl.textContent   = (u.name||'?')[0].toUpperCase();
+  // Avatar colour by role
+  const roleColors = {
+    admin:'linear-gradient(135deg,#f59e0b,#d97706)',
+    it_manager:'linear-gradient(135deg,#8b5cf6,#6d28d9)',
+    production:'linear-gradient(135deg,#3b82f6,#1d4ed8)',
+    quality:'linear-gradient(135deg,#10b981,#047857)',
+    qa:'linear-gradient(135deg,#34d399,#10b981)',
+    qc_manager:'linear-gradient(135deg,#818cf8,#4f46e5)',
+    manager:'linear-gradient(135deg,#a78bfa,#7c3aed)',
+    welding_engineer:'linear-gradient(135deg,#fb923c,#ea580c)',
+    welding_dept:'linear-gradient(135deg,#4ade80,#16a34a)',
+    welding_manager:'linear-gradient(135deg,#fcd34d,#d97706)',
+  };
+  if (avEl) avEl.style.background = roleColors[u.role] || 'linear-gradient(135deg,#3b82f6,#22d3ee)';
+}
+
+// ── Show/hide sidebar groups based on role ──
+function _setupSidebarGroups(role) {
+  const isAdmin       = role === 'admin' || role === 'it_manager';
+  const isProduction  = role === 'production';
+  const isMatQC       = role === 'quality' || role === 'qa' || role === 'qc_manager';
+  const isQC          = role === 'quality' || role === 'qa' || role === 'qc_manager';
+  const isWelding     = role === 'welding_dept' || role === 'welding_engineer' || role === 'welding_manager';
+  const isManager     = role === 'manager' || role === 'qc_manager' || role === 'welding_manager';
+  const showReports   = isManager || isAdmin || isQC;
+
+  const show = (id, visible) => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = visible ? '' : 'none';
+  };
+
+  // Admin sees EVERYTHING
+  if (isAdmin) {
+    show('sbg-production', true);
+    show('sbg-material',   true);
+    show('sbg-qc',         true);
+    show('sbg-welding',    true);
+    show('sbg-manager',    true);
+    show('sbg-admin',      true);
+    show('sbg-reports',    false); // admin sees reports inside each section
+    show('admin-nav',      true);
+    return;
+  }
+
+  show('sbg-production', isProduction);
+  show('sbg-material',   isMatQC);
+  show('sbg-qc',         isQC);
+  show('sbg-welding',    isWelding);
+  show('sbg-manager',    isManager);
+  show('sbg-admin',      false);
+  show('sbg-reports',    showReports && !isAdmin);
+  show('admin-nav',      false);
+}
 
 </script>
 
