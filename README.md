@@ -1,1 +1,1 @@
-# educore
+# tqims
